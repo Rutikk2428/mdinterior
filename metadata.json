@@ -1,0 +1,5 @@
+{
+  "name": "MD Interior Choice - Estimator",
+  "description": "A professional interior design estimation tool featuring role-based access for Admins and Employees, inventory management, and instant PDF estimate generation.",
+  "requestFramePermissions": []
+}
