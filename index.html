@@ -1,69 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MD Interior Choice</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gray: {
-                50: '#F9FAFB',
-                100: '#F3F4F6',
-                200: '#E5E7EB',
-                300: '#D1D5DB',
-                400: '#9CA3AF',
-                500: '#6B7280',
-                600: '#4B5563',
-                700: '#374151',
-                800: '#1F2937',
-                900: '#111827',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
-            },
-            animation: {
-              'slide-up': 'slideUp 0.3s ease-out forwards',
-            },
-            keyframes: {
-              slideUp: {
-                '0%': { transform: 'translateY(100%)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Interior Choice</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              50: '#F9FAFB',
+              100: '#F3F4F6',
+              200: '#E5E7EB',
+              300: '#D1D5DB',
+              400: '#9CA3AF',
+              500: '#6B7280',
+              600: '#4B5563',
+              700: '#374151',
+              800: '#1F2937',
+              900: '#111827',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          animation: {
+            'slide-up': 'slideUp 0.3s ease-out forwards',
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { transform: 'translateY(100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
             }
           }
         }
       }
-    </script>
-    <style>
-      @media print {
-        .no-print { display: none !important; }
-        .print-only { display: block !important; }
-        body { background: white !important; color: black !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        @page { margin: 0; size: auto; }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print {
+        display: none !important;
       }
-      /* Custom Scrollbar for cleaner look */
-      ::-webkit-scrollbar {
-        width: 6px;
+
+      .print-only {
+        display: block !important;
       }
-      ::-webkit-scrollbar-track {
-        background: transparent;
+
+      body {
+        background: white !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #e5e7eb;
-        border-radius: 3px;
+
+      @page {
+        margin: 0;
+        size: auto;
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #9ca3af;
-      }
-    </style>
+    }
+
+    /* Custom Scrollbar for cleaner look */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #e5e7eb;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9ca3af;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -76,7 +98,9 @@
 }
 </script>
 </head>
-  <body class="bg-gray-50 text-gray-900 font-sans antialiased selection:bg-black selection:text-white">
-    <div id="root"></div>
-  </body>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased selection:bg-black selection:text-white">
+  <div id="root"></div>
+</body>
+
 </html>
